@@ -8,7 +8,7 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 
@@ -19,11 +19,11 @@ body {
     grid-row: 1 / 5;
     grid-column: 1;
     display: grid;
-    grid-template: 0.03fr 0.1fr 0.1fr / 1fr;
+    grid-template: 0.03fr 0.03fr 0.03fr / 1fr;
     padding: 0 20px;
     box-sizing: border-box;
     margin: 0px;
-    gap: 50px;
+    gap: 20px;
 }
 
 
@@ -57,7 +57,11 @@ svg {
     flex-direction: column;
     gap: 15px;
 }
-
+.firstContainer div:hover, .secondContainer div:hover {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e5e7eb;
+}
 .firstContainer div, .secondContainer div {
     display: flex;
     gap: 20px;
@@ -66,11 +70,11 @@ svg {
     margin: 0px;
 }
 .firstContainer div p, .secondContainer div p{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0px;
     padding: 0px;
     font-weight: bolder;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
 .secondContainer {
@@ -107,8 +111,7 @@ svg {
 
 .searchBar, .nameContainer, .hiContainer, .buttonContainer {
     display: flex;
-    width: 45%;
-    flex-wrap: wrap;
+    width: 40%;
     box-sizing: border-box;
     align-items: center;
 }
@@ -125,6 +128,7 @@ input[type="search"] {
     width: max(200px, 45%);
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .nameContainer p{
@@ -141,6 +145,9 @@ input[type="search"] {
     width: max(200px, 45%);
     justify-content: flex-start;
 }
+.hiContainer div h2 {
+    font-size: 1.2rem;
+}
 .hiContainer div h2, .hiContainer div p {
     padding: 0;
     margin: 0px;
@@ -154,12 +161,12 @@ input[type="search"] {
 
 
 .buttonContainer {
-    gap: 20px;
+    gap: 10px;
 }
 .buttonContainer button {
     background-color: #0ea5e9;
     border: 1px solid #0ea5e9;
-    padding: 10px 30px;
+    padding: 5px 20px;
     font-weight: bolder;
     border-radius: 20px;
     color: white;
@@ -197,7 +204,7 @@ input[type="search"] {
 .projectContainer div p, .projectContainer div h3, .subContainer div p, .subContainer div h3 {
     padding: 0px;
     margin: 0px;
-    width: 70%;
+
 }
 .projectContainer div p, .subContainer div p {
     font-style: oblique;
