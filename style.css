@@ -20,7 +20,7 @@ body {
     grid-column: 1;
     display: grid;
     grid-template: 0.03fr 0.1fr 0.1fr / 1fr;
-    padding: 0 30px;
+    padding: 0 20px;
     box-sizing: border-box;
     margin: 0px;
     gap: 50px;
@@ -34,14 +34,13 @@ body {
     grid-template: 1fr / 0.1fr 0.1fr;
     justify-items: flex-start;
     align-items: center;
-    gap: 10px;
 }
 .dashContainer svg{
     min-width: 50px;
     min-height: 50px;
 }
 .dashContainer h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     padding: 0px;
     margin: 0px;
@@ -170,45 +169,104 @@ input[type="search"] {
 .blogContainer {
     grid-row: 2 / 4;
     grid-column: 2 / 5;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 10px 20px 60px 20px;
 }
 .projectContainer {
-    display: grid;
+    width: max(600px, 70%);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.projectContainer div {
+.projectContainer div, .subContainer > div {
     border: 1px solid white;
     border-left: 10px solid orange;
     border-radius: 10px;
     background-color: white;
-    padding: 30px;
+    padding: 15px 20px;
     box-sizing: border-box;
     box-shadow: 5px 10px 5px 0.2px darkgrey;
+    width: max(200px, 45%);
 }
 .blogContainer h3 {
     font-size: 1.5rem;
-    grid-row: 1;
+    width: 100%;
+}
+.projectContainer div p, .projectContainer div h3, .subContainer div p, .subContainer div h3 {
     padding: 0px;
     margin: 0px;
-    grid-column: 1 / 3;
+    width: 70%;
 }
-.projectContainer div p, .projectContainer div h3 {
-    padding: 0px;
-    margin: 0px;
-}
-.projectContainer div p {
-    font-weight: lighter;
-    font-size: 0.8rem;
-    width: 33ch;
+.projectContainer div p, .subContainer div p {
+    font-style: oblique;
+    font-size: 1rem;
     line-height: 1;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 .projectContainer div svg {
     float: right;
     padding: 30px 0px 0px 5px;
     max-width: 30px;
     max-height: 20px;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: max(200px, 25%);
+    box-sizing: border-box;
+}
+.subContainer div h3 {
+    font-size: 1.2rem;
+}
+.subContainer div p, .subContainer div h3, .multiContainer div h5, .multiContainer div p {
+    width: 100%;
+}
+.subContainer div p {
+    padding: 10px 0 10px 0;
+    border-bottom: 3px solid #e5e7eb;
+}
+.subContainer div {
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.subContainer > div {
+    width: 100%;
+}
+
+
+
+
+.multiContainer {
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.multiContainer svg {
+    min-width: 70px;
+    min-height: 70px;
+}
+.multiContainer > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 0 10px 0;
+}
+.multiContainer div  div {
+    margin: 0px;
+    padding: 0;
+}
+.multiContainer div p {
+    border: none;
+    padding: 5px 0;
+}
+.multiContainer div h5 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 0.9rem;
 }
