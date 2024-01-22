@@ -108,7 +108,9 @@ svg {
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-
+.secondBar {
+    flex-wrap: nowrap;
+}
 .searchBar, .nameContainer, .hiContainer, .buttonContainer {
     display: flex;
     width: 40%;
@@ -125,7 +127,7 @@ input[type="search"] {
     border: 1px solid #e5e7eb;
 }
 .nameContainer, .buttonContainer {
-    width: max(200px, 45%);
+    width: max(150px, 45%);
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
