@@ -105,11 +105,7 @@ svg {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: wrap;
     box-sizing: border-box;
-}
-.secondBar {
-    flex-wrap: nowrap;
 }
 .searchBar, .nameContainer, .hiContainer, .buttonContainer {
     display: flex;
